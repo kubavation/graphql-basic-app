@@ -1,3 +1,6 @@
-<p>
-  launch-list works!
-</p>
+<div *ngIf="launches$ | async as launches">
+  <div *ngFor="let launch of launches">
+    <p>{{launch.mission_name}}</p>
+  </div>
+</div>
+
