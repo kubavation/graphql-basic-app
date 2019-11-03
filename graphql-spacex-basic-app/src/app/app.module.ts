@@ -1,3 +1,4 @@
+import { LaunchDetailsComponent } from './launches/component/launch-details/launch-details.component';
 import { LaunchListComponent } from './launches/component/launch-list/launch-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LaunchListComponent
+    LaunchListComponent,
+    LaunchDetailsComponent
   ],
   imports: [
     BrowserModule,
