@@ -1351,7 +1351,7 @@ export type LaunchesListQuery = (
   { __typename?: 'Query' }
   & { launchesPast: Maybe<Array<Maybe<(
     { __typename?: 'Launch' }
-    & Pick<Launch, 'id' | 'mission_name' | 'launch_date_local'>
+    & Pick<Launch, 'id' | 'mission_name' | 'details' | 'launch_date_local'>
     & { links: Maybe<(
       { __typename?: 'LaunchLinks' }
       & Pick<LaunchLinks, 'mission_patch_small' | 'reddit_media' | 'flickr_images'>
@@ -1395,6 +1395,7 @@ export const LaunchesListDocument = gql`
   launchesPast(limit: $limit) {
     id
     mission_name
+    details
     launch_date_local
     links {
       mission_patch_small

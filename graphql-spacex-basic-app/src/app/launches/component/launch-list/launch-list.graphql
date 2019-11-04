@@ -3,6 +3,7 @@ query launchesList($limit: Int!) {
     launchesPast(limit: $limit) {
         id,
         mission_name,
+        details,
         launch_date_local,
         links {
             mission_patch_small,
