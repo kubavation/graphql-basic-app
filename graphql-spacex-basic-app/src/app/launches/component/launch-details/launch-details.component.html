@@ -8,9 +8,8 @@
         <mat-card-content style="width: 30%;">
           <p>
             {{launch.details}}
-            {{launch.links.video_link}}
           </p>
-          <iframe width="560" height="315" src="{{launch.video_link}}" 
+          <iframe width="560" height="315" [src]="launch.links.video_link | embed" 
           frameborder="0" allow="accelerometer;
           autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>

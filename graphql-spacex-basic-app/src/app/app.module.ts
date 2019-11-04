@@ -11,13 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material';
+import { EmbedYtPipe } from './launches/pipe/embed-yt.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LaunchListComponent,
     LaunchDetailsComponent,
-    LaunchDetailsPipe
+    LaunchDetailsPipe,
+    EmbedYtPipe
   ],
   imports: [
     BrowserModule,
