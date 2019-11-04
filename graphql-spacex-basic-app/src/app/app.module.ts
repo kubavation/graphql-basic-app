@@ -12,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material';
 import { EmbedYtPipe } from './launches/pipe/embed-yt.pipe';
+import { SafePipe } from './launches/pipe/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EmbedYtPipe } from './launches/pipe/embed-yt.pipe';
     LaunchListComponent,
     LaunchDetailsComponent,
     LaunchDetailsPipe,
-    EmbedYtPipe
+    EmbedYtPipe,
+    SafePipe
   ],
   imports: [
     BrowserModule,
