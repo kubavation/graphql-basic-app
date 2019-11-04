@@ -1,3 +1,4 @@
+import { LaunchDetailsPipe } from './launches/pipe/LaunchDetailsPipe.pipe';
 import { LaunchDetailsComponent } from './launches/component/launch-details/launch-details.component';
 import { LaunchListComponent } from './launches/component/launch-list/launch-list.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,8 @@ import {MatButtonModule} from '@angular/material';
   declarations: [
     AppComponent,
     LaunchListComponent,
-    LaunchDetailsComponent
+    LaunchDetailsComponent,
+    LaunchDetailsPipe
   ],
   imports: [
     BrowserModule,

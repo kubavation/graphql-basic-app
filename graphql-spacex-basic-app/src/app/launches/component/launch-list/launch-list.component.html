@@ -2,7 +2,7 @@
 
   <div *ngIf="launches$ | async as launches">
 
-  <mat-grid-list cols="4" rowHeight="1000px">
+  <mat-grid-list cols="4" rowHeight="700px">
     <mat-grid-tile
         *ngFor="let launch of launches">
           <mat-card class="example-card">
@@ -13,7 +13,7 @@
             <img mat-card-image [src]="launch.links.mission_patch_small">
             <mat-card-content>
               <p>
-                {{launch.details}}
+                {{launch.details | launchDetails}}
               </p>
             </mat-card-content>
             <mat-card-actions>
