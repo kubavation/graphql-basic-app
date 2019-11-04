@@ -1337,7 +1337,7 @@ export type LaunchDetailsQuery = (
       & Pick<LaunchRocket, 'rocket_name' | 'rocket_type'>
     )>, links: Maybe<(
       { __typename?: 'LaunchLinks' }
-      & Pick<LaunchLinks, 'article_link' | 'flickr_images' | 'video_link'>
+      & Pick<LaunchLinks, 'mission_patch_small' | 'article_link' | 'flickr_images' | 'video_link'>
     )> }
   )> }
 );
@@ -1355,9 +1355,6 @@ export type LaunchesListQuery = (
     & { links: Maybe<(
       { __typename?: 'LaunchLinks' }
       & Pick<LaunchLinks, 'mission_patch_small' | 'reddit_media' | 'flickr_images'>
-    )>, rocket: Maybe<(
-      { __typename?: 'LaunchRocket' }
-      & Pick<LaunchRocket, 'rocket_name' | 'rocket_type'>
     )> }
   )>>> }
 );
@@ -1375,6 +1372,7 @@ export const LaunchDetailsDocument = gql`
     }
     details
     links {
+      mission_patch_small
       article_link
       flickr_images
       video_link
@@ -1401,10 +1399,6 @@ export const LaunchesListDocument = gql`
       mission_patch_small
       reddit_media
       flickr_images
-    }
-    rocket {
-      rocket_name
-      rocket_type
     }
   }
 }

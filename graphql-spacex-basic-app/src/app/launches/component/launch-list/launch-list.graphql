@@ -9,10 +9,6 @@ query launchesList($limit: Int!) {
             mission_patch_small,
             reddit_media,
             flickr_images
-        },
-        rocket {
-            rocket_name,
-            rocket_type
         }
     }
     

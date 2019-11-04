@@ -23,7 +23,7 @@ export class LaunchDetailsComponent implements OnInit {
             return this.launchService.fetch({id});
           }),
           map(res => res.data.launch)
-      )
+      );
   }
 
 }

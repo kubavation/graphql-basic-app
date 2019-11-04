@@ -1,3 +1,19 @@
-<div *ngIf="launch$ | async as launch">
-  <p>{{launch.id}}</p>
+<div *ngIf="launch$ | async as launch" style="background-color: #dbb6c8;margin:0 auto;width: 80%;">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title style="font-size: 40px;">{{launch.mission_name}}</mat-card-title>
+          <mat-card-subtitle>{{launch.launch_date_local | date}}</mat-card-subtitle>
+        </mat-card-header>
+        <img  [src]="launch.links.mission_patch_small" [width]="300" >
+        <mat-card-content style="width: 30%;">
+          <p>
+            {{launch.details}}
+            {{launch.links.video_link}}
+          </p>
+          <iframe width="560" height="315" src="{{launch.video_link}}" 
+          frameborder="0" allow="accelerometer;
+          autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        </mat-card-content>
+    </mat-card>
 </div>
